@@ -24,31 +24,3 @@ const disableLightmode = () => {
 }
 
 if(lightmode === "active") enableLightmode()
-
-
-// play audio
-
-const note = document.getElementById('note')
-const audio = document.getElementById('audio')
-
-note.addEventListener('click', () => {
-    if (audio.paused){ // if the current status of the audio is paused then when clicked it will play
-        audio.play()
-    }
-    else{
-        audio.pause()
-    }
-});
-
-const container = document.getElementById('interactive')
-const clicksfx = document.getElementById('clickingsound')
-
-container.addEventListener('click', () => {
-    if(clicksfx.paused){
-        clicksfx.play()
-    }
-    else{
-        clicksfx.pause()
-    }
-})
-
